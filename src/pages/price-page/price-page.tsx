@@ -1,18 +1,14 @@
-import { Link } from "react-router-dom";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 
-import "./home-page-style.css";
-
-
-function HomePage() {
+function PricePage() {
     return(
         <div>
             <Header/>
-            <Link to={ "/price" }>Прайс</Link>
+            Страница прайса!
             <Footer/>
         </div>
     )
 }
 
-export default HomePage;
+export default PricePage;
