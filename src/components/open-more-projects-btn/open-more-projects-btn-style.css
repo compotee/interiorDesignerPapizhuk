@@ -1,0 +1,17 @@
+.more-projects-container {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid #C1C1C1;
+}
+
+.more-projects-text {
+    text-align: center;
+    margin: 0;
+    color: #C1C1C1;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 2.1px;
+}

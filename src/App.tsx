@@ -8,12 +8,12 @@ import PricePage from "./pages/price-page/price-page";
 function App() {
   return (
     <BrowserRouter>
-          <Routes>
-              <Route path='/' element={<HomePage />}/>
-              <Route path="*" element={<NotfoundPage />} />
-              <Route path="/price" element={<PricePage/>}/>
-          </Routes>
-        </BrowserRouter> 
+      <Routes>
+          <Route path='/' element={<HomePage />}/>
+          <Route path="*" element={<NotfoundPage />} />
+          <Route path="/price" element={<PricePage/>}/>
+      </Routes>
+    </BrowserRouter> 
   )
 }
 
