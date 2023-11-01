@@ -1,5 +1,139 @@
-.back-form-link {
+.home-div {
+    margin-bottom: 70px;
+}
+
+.home-main-img {
     width: 100%;
-    padding: 10px 0;
+    margin-bottom: 35px;
+}
+
+.home-title {
+    margin-bottom: 30px;
+    color: #C1C1C1;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4.25px;
+}
+
+.home-text {
+    color: #C1C1C1;
+    text-align: right;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 166.188%; /* 23.266px */
+    letter-spacing: 2.1px;
+}
+
+.home-projects-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+.home-our-projects-title {
+    margin-bottom: 30px;
+    color: #C1C1C1;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4.25px;
+}
+
+.more-projects-btn {
+    align-self: center;
+    color: #C1C1C1;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 2.1px;
     border: 1px solid #C1C1C1;
+    padding: 10px 35px;
+}
+
+.home-about-div {
+    margin-bottom: 70px;
+}
+
+.home-about-title {
+    margin-bottom: 30px;
+    color: #C1C1C1;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4.25px;
+}
+
+.home-about-text-div {
+    background-image: url(img/lena-photo.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain; 
+}
+
+.home-about-text {
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin: 0;
+    color: #C1C1C1;
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 2.1px;
+}
+
+.price-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    border: 1px solid #C1C1C1;
+}
+
+.price-link-text {
+    width: 30%;
+    margin: 0;
+    color: #C1C1C1;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4.25px;
+}
+
+.back-form-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    border: 1px solid #C1C1C1;
+}
+
+.back-form-link-text {
+    margin: 0;
+    color: #C1C1C1;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4.25px;
 }

@@ -1,14 +1,14 @@
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 
-function PricePage() {
+function ObjectPage() {
     return(
         <div>
             <Header/>
-            <h2>Расчет стоимости</h2>
+            <h2>Страница объекта</h2>
             <Footer/>
         </div>
     )
 }
 
-export default PricePage;
+export default ObjectPage;

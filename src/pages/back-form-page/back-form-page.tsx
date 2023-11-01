@@ -1,11 +1,12 @@
 import Header from "../../components/header/header";
-
+import Footer from "../../components/footer/footer";
 
 function BackFormPage() {
     return(
         <div>
             <Header/>
-            Страница обратной связи!
+            <h2>Оставить заявку</h2>
+            <Footer/>
         </div>
     )
 }

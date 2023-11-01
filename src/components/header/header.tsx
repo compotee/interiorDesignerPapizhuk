@@ -6,7 +6,7 @@ import "./header-style.css";
 function Header() {
     return (
         <div className="header-container">
-            <img src={ logo } alt='Логотип'/>
+            <img className="header-logo" src={ logo } alt='Логотип'/>
             <OpenMenuBtn/>
         </div>
     )

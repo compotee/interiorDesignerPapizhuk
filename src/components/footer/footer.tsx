@@ -9,17 +9,17 @@ import "./footer-style.css";
 function Footer() {
     return (
         <div className="footer-container">
-            <p>Контакты</p>
-            <a href="tel:+79156414442">+ 7 915 641 44 42</a>
+            <p className="footer-text">Контакты</p>
+            <a className="footer-number" href="tel:+79156414442">+ 7 915 641 44 42</a>
             <div className="footer-links-container">
                 <Link to={'https://vk.com/papizuk_design'} className="footer-link">
-                    <img src={ whatsAppLogo } alt="Логотип ВК"/>
+                    <img src={ whatsAppLogo } alt="Логотип ватсап"/>
                 </Link>
                 <Link to={'https://vk.com/papizuk_design'} className="footer-link">
-                    <img src={ tgLogo } alt="Логотип ВК"/>
+                    <img src={ tgLogo } alt="Логотип ТГ"/>
                 </Link>
                 <Link to={'https://vk.com/papizuk_design'} className="footer-link">
-                    <img src={ instLogo } alt="Логотип ВК"/>
+                    <img src={ instLogo } alt="Логотип инста"/>
                 </Link>
                 <Link to={'https://vk.com/papizuk_design'} className="footer-link">
                     <img src={ vkLogo } alt="Логотип ВК"/>
