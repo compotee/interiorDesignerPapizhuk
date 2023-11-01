@@ -1,8 +1,8 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import OpenMoreProjectsBtn from "../../components/open-more-projects-btn/open-more-projects-btn";
-import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
+// import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
 import OpenChoosePriceBtn from "../../components/open-choose-price/open-choose-price";
 
 import startImg from './img/start-img.png'
@@ -30,7 +30,8 @@ function HomePage() {
                 <img src={ lenaPhoto } alt="Фотография Елены" />
             </div>
             <OpenChoosePriceBtn/>
-            <OpenBackFormBtn/>
+            {/* <OpenBackFormBtn/> */}
+            <Link to={ "/form" } className="back-form-link">Оставить заявку</Link>
             <Footer/>
         </div>
     )

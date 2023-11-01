@@ -75,6 +75,9 @@
   
   a {
     background-color: transparent;
+    /* text-decoration: none; */
+    color: #FFFFFF;
+    text-decoration: none;
   }
   
   /**
