@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
+// import MenuModal from "../../components/menu-modal/menu-modal";
 // import OpenMoreProjectsBtn from "../../components/open-more-projects-btn/open-more-projects-btn";
 // import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
 // import OpenChoosePriceBtn from "../../components/open-choose-price/open-choose-price";

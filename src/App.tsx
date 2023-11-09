@@ -15,11 +15,11 @@ function App() {
           <Routes>
               <Route path='/' element={<HomePage />}/>
               <Route path="*" element={<NotfoundPage />} />
-              <Route path="/price" element={<PricePage/>}/>
               <Route path="/back-form" element={<BackFormPage/>}/>
               <Route path="/design-projects" element={<DesignProjectsPage/>}/>
               <Route path="/implemented-objects" element={<ImplementedObjectsPage/>}/>
-              <Route path="object" element={<ObjectPage/>}/>
+              <Route path="/price" element={<PricePage/>}/>
+              <Route path="/object" element={<ObjectPage/>}/>
           </Routes>
         </BrowserRouter> 
   )
