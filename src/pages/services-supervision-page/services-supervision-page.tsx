@@ -1,14 +1,16 @@
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 
-function DesignProjectsPage() {
+import './services-supervision-page-style.css'
+
+function ServicesSupervisionPage() {
     return(
         <div className="container">
             <Header/>
-            <h2 className="title">Дизайн проекты</h2>
+            <h2 className="title">Авторский надзор</h2>
             <Footer/>
         </div>
     )
 }
 
-export default DesignProjectsPage;
+export default ServicesSupervisionPage;

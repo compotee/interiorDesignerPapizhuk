@@ -48,13 +48,15 @@
 } */
 
 .menu-modal-container {
-    visibility: hidden;
+    z-index: 100;
     position: absolute;
-    top: 100px;
-    left: 29px;
-    width: calc(100% - 58px);
-    height: calc(100% - 130px);
-    padding-top: 30px;
+    top: 60px;
+    visibility: hidden;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    min-height: auto;
+    box-sizing: border-box;
+    padding: 30px 50px;
     background-color: #111111;
 }
 

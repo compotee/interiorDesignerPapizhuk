@@ -3,9 +3,9 @@ import Footer from "../../components/footer/footer";
 
 function ObjectPage() {
     return(
-        <div>
+        <div className="container">
             <Header/>
-            <h2>Страница объекта</h2>
+            <h2 className="title">Страница объекта</h2>
             <Footer/>
         </div>
     )

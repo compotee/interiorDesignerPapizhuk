@@ -3,9 +3,9 @@ import Footer from "../../components/footer/footer";
 
 function PricePage() {
     return(
-        <div>
+        <div className="container">
             <Header/>
-            <h2>Расчет стоимости</h2>
+            <h2 className="title">Расчет стоимости</h2>
             <Footer/>
         </div>
     )

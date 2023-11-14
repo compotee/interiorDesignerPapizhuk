@@ -1,14 +1,16 @@
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 
-function DesignProjectsPage() {
+import './services-design-page-style.css'
+
+function ServicesDesignPage() {
     return(
         <div className="container">
             <Header/>
-            <h2 className="title">Дизайн проекты</h2>
+            <h2 className="title">Дизайн проект</h2>
             <Footer/>
         </div>
     )
 }
 
-export default DesignProjectsPage;
+export default ServicesDesignPage;
