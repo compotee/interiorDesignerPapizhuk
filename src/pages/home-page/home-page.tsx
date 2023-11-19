@@ -6,14 +6,18 @@ import Footer from "../../components/footer/footer";
 // import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
 // import OpenChoosePriceBtn from "../../components/open-choose-price/open-choose-price";
 
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-import startImg from './img/start-img.png'
+import firstStartImg from './img/start-img-1.png'
+import secondStartImg from './img/start-img-2.png'
+import thirdStartImg from './img/start-img-3.png'
+import fourthStartImg from './img/start-img-4.png'
+import fifthStartImg from './img/start-img-5.png'
 import arrow from './img/arrow.svg'
 import "./home-page-style.css";
 
@@ -23,35 +27,44 @@ function HomePage() {
         <div className="container">
             <Header/>
             <div className="home-div">
-                {/* <Swiper
-                    spaceBetween={30}
-                    centeredSlides={true}
-                    autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                    }}
-                    pagination={{
-                    clickable: true,
-                    }}
-                    modules={[EffectFade, Autoplay, Pagination]}
-                    loop={true}
-                    // effect={'fade'}
-                >
-                    <SwiperSlide>
-                        <img className="home-main-img" src={ startImg } alt="Стартовое изображение"/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img className="home-main-img" src={ startImg } alt="Стартовое изображение"/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img className="home-main-img" src={ startImg } alt="Стартовое изображение"/>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img className="home-main-img" src={ startImg } alt="Стартовое изображение"/>
-                    </SwiperSlide>
-                </Swiper> */}
-                <img className="home-main-img" src={ startImg } alt="Стартовое изображение"/>
-                <h1 className="home-title">Дизайн студия интерьера</h1>
+                <div className="swiper-container">
+                    <div className="gradiend"></div>
+                    <Swiper
+                        className="home-div-swiper"
+                        spaceBetween={0}
+                        centeredSlides={true}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        }}
+                        // pagination={{
+                        //     clickable: true,
+                        // }}
+                        modules={[EffectFade, Autoplay, Pagination]}
+                        loop={true}
+                        effect={'fade'}
+                    >
+                        <SwiperSlide>
+                            <img className="home-main-img" src={ thirdStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="home-main-img" src={ firstStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="home-main-img" src={ secondStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="home-main-img" src={ fourthStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="home-main-img" src={ fifthStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                    </Swiper>
+                    <div className="swiper-text-div">
+                        <h1 className="swiper-title">Дизайн студия интерьера</h1>
+                        <p className="swiper-text">Елены Папижук</p>
+                    </div>
+                </div>
                 <p className="home-text">Мы делаем удобный и уютный интерьер для вашего дома. В бэкграунде у нас такие работы как: дизайн интерьера для различных квартир, домов, а так же есть предложения для застройщиков и авторский надзор за несколькими объектами.</p>
             </div>
             <div className="home-projects-div">

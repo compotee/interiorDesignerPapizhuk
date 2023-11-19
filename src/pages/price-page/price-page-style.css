@@ -1,0 +1,99 @@
+.price-page-title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 4.25px;
+    color: #C1C1C1;
+}
+
+.calculation-div {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.calculation-title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 2.55px;
+    color: #C1C1C1;
+}
+
+.calculation-tariff-select {
+    align-self: center;
+    margin-bottom: 30px;
+    padding: 6px 0px 6px 25px;
+    width: 80%;
+    border-radius: 0;
+    border: 1px solid #D4D6D7;
+    background-color: transparent;
+
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-weight: 300;
+    color: #C1C1C1;
+}
+
+.calculation-tariff-select-option {
+    top: 155;
+    width: 80%;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    background:red;
+    display:block;
+    width:20px;
+    height:40px;
+    border:2px solid black;
+  }
+  
+  /* Remove arrow from select elements in IE */
+  ::-ms-expand {
+    display: none;
+}
+
+
+.alculation-selected-area-input {
+    margin-bottom: 20px;
+}
+
+.calculation-selected-area {
+    align-self: center;
+    width: auto;
+    padding: 3px 25px;
+    margin-bottom: 30px;
+    border: 1px solid #D4D6D7;
+}
+
+.calculation-button {
+    align-self: center;
+    width: 226px;
+    margin-bottom: 30px;
+    padding: 10px 60px;
+    border: 1px solid #C1C1C1;
+    font-family: Ubuntu;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 2.55px;
+    color: #C1C1C1;
+}
+
+.calculation-final-price {
+    align-self: center;
+    margin-bottom: 45px;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    color: #C1C1C1;
+}

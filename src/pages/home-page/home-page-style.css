@@ -1,32 +1,71 @@
 .home-div {
-    margin-bottom: 70px;
+    margin-bottom: 45px;
+}
+
+.swiper-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.gradiend {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.70));
+    opacity: 1;
+}
+
+.home-div-swiper {
+    z-index: 0;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
 }
 
 .home-main-img {
     width: 100%;
-    margin-bottom: 35px;
 }
 
-.home-title {
-    margin-bottom: 30px;
-    color: #C1C1C1;
+.swiper-text-div {
+    z-index: 2;
+    position: absolute;
+    bottom: 17px;
+    left: 20px;
+}
+
+.swiper-title {
+    margin: 0;
+    margin-bottom: 12px;
     font-family: Ubuntu;
-    font-size: 17px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 6.25px;
+    color: #C1C1C1;
+}
+
+.swiper-text {
+    margin: 0;
+    font-family: Ubuntu;
+    font-size: 14px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
     letter-spacing: 4.25px;
+    color: #C1C1C1;
 }
 
 .home-text {
-    color: #C1C1C1;
-    text-align: right;
     font-family: Ubuntu;
     font-size: 14px;
     font-style: normal;
     font-weight: 300;
     line-height: 166.188%; /* 23.266px */
     letter-spacing: 2.1px;
+    color: #C1C1C1;
 }
 
 .home-projects-div {
@@ -78,7 +117,7 @@
     background-image: url(img/lena-photo.png);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: contain; 
+    /* background-size: contain;  */
 }
 
 .home-about-text {
@@ -141,16 +180,27 @@
 }
 
 
-
+/* 
 .swiper {
     width: 100%;
     height: 100%;
 }
 
-.swiper-pagination-bullet {
+.swiper-container {
+    position: relative;
+}
+
+.home-div-swiper-title {
+    z-index: 99999;
+    position: absolute;
+    top: 1px;
+    color: red;
+} */
+
+/* .swiper-pagination-bullet {
     background-color: #D9D9D9;
 }
 
 .swiper-pagination-bullet-active {
     background-color: #817B7B;
-}
+} */
