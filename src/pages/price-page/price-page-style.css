@@ -10,6 +10,106 @@
     color: #C1C1C1;
 }
 
+/*выбор тарифа (слайдер)*/
+.swiper-wrapper {
+    align-items: stretch;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.price-div-swiper {
+    margin-bottom: 65px;
+    box-shadow: 0px 0px 4px 2px rgba(212, 214, 215, 0.25);
+}
+
+.tariff-slide {
+    box-sizing: border-box;
+    padding: 40px 30px;
+    box-shadow: 360px 4px 4px 0px rgba(0, 0, 0, 0.75) inset;
+    border: 1px solid #C1C1C1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.min-tariff {
+    background-image: url('./img/min-img.png');
+}
+
+.medium-tariff {
+    background-image: url('./img/medium-img.png');
+}
+
+.max-tariff {
+    background-image: url('./img/max-img.png');
+}
+
+.tariff-title {
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2.55px;
+}
+
+.tariff-pluses-list {
+    margin-bottom: 40px;
+}
+
+.tatiff-plus {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 166.188%; /* 23.266px */
+    letter-spacing: 2.1px;
+}
+
+.tariff-slide-bottom-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tariff-price {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 166.188%;
+    letter-spacing: 2.1px;
+}
+
+.choose-tariff-btn {
+    box-sizing: border-box;
+    padding: 10px 50px;
+    height: 45px;
+    border: solid 1px #C1C1C1;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 166.188%;
+    letter-spacing: 2.1px;
+    color: #C1C1C1;
+}
+
+.choose-tariff-btn-active {
+    box-sizing: border-box;
+    padding: 10px 50px;
+    height: 45px;
+    background-color: #C1C1C1;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 166.188%;
+    letter-spacing: 2.1px;
+    color: #111;
+}
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: var(--swiper-pagination-top, auto);
+    left: 0;
+    width: 100%;
+}
+
+/*расчет стоимости*/
 .calculation-div {
     display: flex;
     flex-direction: column;
@@ -32,7 +132,7 @@
 .calculation-tariff-select {
     align-self: center;
     margin-bottom: 30px;
-    padding: 6px 0px 6px 25px;
+    padding: 6px 0px 6px 6px;
     width: 80%;
     border-radius: 0;
     border: 1px solid #D4D6D7;
@@ -45,40 +145,32 @@
 }
 
 .calculation-tariff-select-option {
-    top: 155;
     width: 80%;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
-    appearance: none !important;
-    background:red;
-    display:block;
-    width:20px;
-    height:40px;
-    border:2px solid black;
-  }
-  
-  /* Remove arrow from select elements in IE */
-  ::-ms-expand {
-    display: none;
+    background-color: #111;
 }
 
-
 .alculation-selected-area-input {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    height: 1px;
+    accent-color: #C1C1C1;
 }
 
 .calculation-selected-area {
     align-self: center;
     width: auto;
+    text-align: center;
+    width: 10%;
     padding: 3px 25px;
     margin-bottom: 30px;
+    color: #C1C1C1;
     border: 1px solid #D4D6D7;
+    background: transparent;
 }
 
 .calculation-button {
     align-self: center;
     width: 226px;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
     padding: 10px 60px;
     border: 1px solid #C1C1C1;
     font-family: Ubuntu;

@@ -50,10 +50,15 @@ ol, ul {
 	list-style: none;
 }
 
+p {
+  margin: 0;
+}
+
 
 /*глобальные стили*/
 .title {
   margin: 0;
+  margin-bottom: 40px;
   width: 100%;
   text-align: center;
   font-size: 22px;

@@ -3,7 +3,7 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 // import MenuModal from "../../components/menu-modal/menu-modal";
 // import OpenMoreProjectsBtn from "../../components/open-more-projects-btn/open-more-projects-btn";
-// import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
+import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
 // import OpenChoosePriceBtn from "../../components/open-choose-price/open-choose-price";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -81,12 +81,8 @@ function HomePage() {
                 <p className="price-link-text">Рассчет стоимости вашего заказа</p> 
                 <img src={ arrow } alt="Стрелка" />
             </Link>
-            <Link to={ "/back-form" } className="back-form-link">
-                <p className="back-form-link-text">Оставить заявку</p>
-                <img src={ arrow } alt="Стрелка" />
-            </Link>
             {/* <OpenChoosePriceBtn/> */}
-            {/* <OpenBackFormBtn/> */}
+            <OpenBackFormBtn/>
             <Footer/>
         </div>
     )
