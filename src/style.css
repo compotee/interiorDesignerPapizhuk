@@ -52,6 +52,10 @@ ol, ul {
 
 p {
   margin: 0;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  color: #C1C1C1;
 }
 
 
@@ -61,6 +65,7 @@ p {
   margin-bottom: 40px;
   width: 100%;
   text-align: center;
+  font-family: Ubuntu;
   font-size: 22px;
   font-weight: 300;
   line-height: normal;

@@ -1,7 +1,6 @@
 .price-page-title {
     margin: 0;
     margin-bottom: 50px;
-    font-family: Ubuntu;
     font-size: 17px;
     font-style: normal;
     font-weight: 300;
@@ -9,6 +8,7 @@
     letter-spacing: 4.25px;
     color: #C1C1C1;
 }
+
 
 /*выбор тарифа (слайдер)*/
 .swiper-wrapper {
@@ -56,6 +56,10 @@
     letter-spacing: 2.55px;
 }
 
+.incoming-tariff {
+    margin-bottom: 10px;
+}
+
 .tariff-pluses-list {
     margin-bottom: 40px;
 }
@@ -63,7 +67,7 @@
 .tatiff-plus {
     margin-bottom: 5px;
     font-size: 14px;
-    line-height: 166.188%; /* 23.266px */
+    line-height: 166.188%;
     letter-spacing: 2.1px;
 }
 
@@ -72,14 +76,6 @@
     flex-direction: column;
     margin-top: auto;
     align-items: center;
-}
-
-.swiper-pagination-bullet {
-    background-color: rgba(217, 217, 217, 0.90);
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #C1C1C1;
 }
 
 .tariff-price {
@@ -94,13 +90,12 @@
     box-sizing: border-box;
     padding: 10px 50px;
     height: 45px;
-    border: solid 1px #C1C1C1;
-
     font-size: 14px;
     font-weight: 300;
     line-height: 166.188%;
     letter-spacing: 2.1px;
     color: #C1C1C1;
+    border: solid 1px #C1C1C1;
 }
 
 .choose-tariff-btn-active {
@@ -108,7 +103,6 @@
     padding: 10px 50px;
     height: 45px;
     background-color: #C1C1C1;
-
     font-size: 14px;
     font-weight: 300;
     line-height: 166.188%;
@@ -116,12 +110,14 @@
     color: #111;
 }
 
-.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, 8px);
-    top: var(--swiper-pagination-top, auto);
-    left: 0;
-    width: 100%;
+.swiper-pagination-bullet {
+    background-color: rgba(217, 217, 217, 0.90);
 }
+
+.swiper-pagination-bullet-active {
+    background-color: #C1C1C1;
+}
+
 
 /*расчет стоимости*/
 .calculation-div {
@@ -134,7 +130,6 @@
 .calculation-title {
     margin: 0;
     margin-bottom: 30px;
-    font-family: Ubuntu;
     font-size: 17px;
     font-style: normal;
     font-weight: 300;
@@ -158,7 +153,6 @@
     background-repeat: no-repeat;
     background-position: calc(100% - 12px) center;
 
-    font-family: Ubuntu;
     font-size: 17px;
     font-weight: 300;
     color: #C1C1C1;
@@ -173,7 +167,7 @@
     background-color: #111;
 }
 
-.alculation-selected-area-input {
+.calculation-selected-area-range-input {
     margin-bottom: 30px;
     height: 1px;
     accent-color: #C1C1C1;
@@ -208,7 +202,6 @@
     margin-bottom: 45px;
     padding: 10px 60px;
     border: 1px solid #C1C1C1;
-    font-family: Ubuntu;
     font-size: 17px;
     font-weight: 300;
     letter-spacing: 2.55px;
@@ -218,7 +211,6 @@
 .calculation-final-price {
     align-self: center;
     margin-bottom: 45px;
-    font-family: Ubuntu;
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 5px;

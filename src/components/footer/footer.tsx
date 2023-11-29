@@ -10,20 +10,23 @@ function Footer() {
     return (
         <div className="footer-container">
             <p className="footer-text">Контакты</p>
-            <a className="footer-number" href="tel:+79156414442">+ 7 915 641 44 42</a>
-            <div className="footer-links-container">
-                <Link to={'https://vk.com/papizuk_design'} className="footer-link">
-                    <img src={ whatsAppLogo } alt="Логотип ватсап"/>
-                </Link>
-                <Link to={'https://vk.com/papizuk_design'} className="footer-link">
-                    <img src={ tgLogo } alt="Логотип ТГ"/>
-                </Link>
-                <Link to={'https://vk.com/papizuk_design'} className="footer-link">
-                    <img src={ instLogo } alt="Логотип инста"/>
-                </Link>
-                <Link to={'https://vk.com/papizuk_design'} className="footer-link">
-                    <img src={ vkLogo } alt="Логотип ВК"/>
-                </Link>
+            <div className="footer-contacts-container">
+                <p className="footer-name">Елена</p>
+                <a className="footer-number" href="tel:+79156414442">+ 7 915 641 44 42</a>
+                <div className="footer-links-container">
+                    <Link to={'https://vk.com/papizuk_design'} className="footer-link">
+                        <img src={ whatsAppLogo } alt="Логотип ватсап"/>
+                    </Link>
+                    <Link to={'https://vk.com/papizuk_design'} className="footer-link">
+                        <img src={ tgLogo } alt="Логотип ТГ"/>
+                    </Link>
+                    <Link to={'https://vk.com/papizuk_design'} className="footer-link">
+                        <img src={ instLogo } alt="Логотип инста"/>
+                    </Link>
+                    <Link to={'https://vk.com/papizuk_design'} className="footer-link">
+                        <img src={ vkLogo } alt="Логотип ВК"/>
+                    </Link>
+                </div>
             </div>
         </div>
     )
