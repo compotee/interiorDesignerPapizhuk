@@ -1,5 +1,5 @@
 .header-logo {
-    width: 120px;
+    width: 140px;
 }
 
 .header-container {
@@ -31,21 +31,23 @@
     width: 100%;
     border-radius: 10px;
     background: #C1C1C1;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-/* .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
+.line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+    width: 30px;
 }
   
 .line2 {
-    transition: transform 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
 }
   
 .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-} */
+    transform: rotate(-45deg) translate(7px, -7px);
+    width: 30px;
+}
 
 .menu-modal-container {
     z-index: 100;

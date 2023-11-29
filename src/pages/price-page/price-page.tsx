@@ -49,7 +49,7 @@ function PricePage() {
             <Header/>
             <h2 className="title">Расчет стоимости</h2>
             <p className="price-page-title">Выбор пакета</p>
-            <Swiper
+            {/* <Swiper
                 className="price-div-swiper"
                 spaceBetween={0}
                 centeredSlides={true}
@@ -121,23 +121,126 @@ function PricePage() {
                     </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="tariff-slide max-tariff">
-                    <p className="tariff-title">{ TARIFFS.max.name }</p>
-                    <p>ПАКЕТ { TARIFFS.medium.name }</p>
-                    <ul className="tariff-pluses-list">
-                        <li className="tatiff-plus">+ Полная проработка дизайн проекта</li>
-                        <li className="tatiff-plus">+ Визуализации</li>
-                        <li className="tatiff-plus">+ Спецификация</li>
-                    </ul>
-                    <div className="tariff-slide-bottom-div">
-                        <p className="tariff-price">{ TARIFFS.max.price }р м²</p>
-                        <button 
-                            className={ selectedTariff.name === TARIFFS.max.name ? "choose-tariff-btn-active"  : "choose-tariff-btn" }
-                            onClick={ () => onSwiperTariffClick(TARIFFS.max) }
-                            disabled={ selectedTariff.name === TARIFFS.max.name ? true : false }
-                        >
-                            { selectedTariff.name === TARIFFS.max.name ? 'Тариф выбран' : 'Выбрать тариф' }
-                        </button>
+                <SwiperSlide className="max-tariff">
+                    <div className="tariff-slide max-tariff">
+                        <p className="tariff-title">{ TARIFFS.max.name }</p>
+                        <p>ПАКЕТ { TARIFFS.medium.name }</p>
+                        <ul className="tariff-pluses-list">
+                            <li className="tatiff-plus">+ Полная проработка дизайн проекта</li>
+                            <li className="tatiff-plus">+ Визуализации</li>
+                            <li className="tatiff-plus">+ Спецификация</li>
+                        </ul>
+                        <div className="tariff-slide-bottom-div">
+                            <p className="tariff-price">{ TARIFFS.max.price }р м²</p>
+                            <button 
+                                className={ selectedTariff.name === TARIFFS.max.name ? "choose-tariff-btn-active"  : "choose-tariff-btn" }
+                                onClick={ () => onSwiperTariffClick(TARIFFS.max) }
+                                disabled={ selectedTariff.name === TARIFFS.max.name ? true : false }
+                            >
+                                { selectedTariff.name === TARIFFS.max.name ? 'Тариф выбран' : 'Выбрать тариф' }
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper> */}
+
+            <Swiper
+                className="price-div-swiper"
+                spaceBetween={0}
+                centeredSlides={true}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Pagination]}
+            >
+                <SwiperSlide>
+                    <div className="tariff-slide min-tariff">
+                        <p className="tariff-title">{ TARIFFS.plan.name }</p>
+                        <ul className="tariff-pluses-list">
+                            <li className="tatiff-plus">+ Выезд на замер/помощь в онлайн замере</li>
+                            <li className="tatiff-plus">+ Обмерный план</li>
+                            <li className="tatiff-plus">+ Планировачное решение</li>
+                            <li className="tatiff-plus">+ Корректировки</li>
+                        </ul>
+                        <div className="tariff-slide-bottom-div">
+                            <p className="tariff-price">{ TARIFFS.plan.price } р м²</p>
+                            <button 
+                                className={ selectedTariff.name === TARIFFS.plan.name ? "choose-tariff-btn-active"  : "choose-tariff-btn" }
+                                onClick={ () => onSwiperTariffClick(TARIFFS.plan) }
+                                disabled={ selectedTariff.name === TARIFFS.plan.name ? true : false }
+                            >
+                                { selectedTariff.name === TARIFFS.plan.name ? 'Тариф выбран' : 'Выбрать тариф' }
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="tariff-slide min-tariff">
+                        <p className="tariff-title">{ TARIFFS.min.name }</p>
+                        <ul className="tariff-pluses-list">
+                            <li className="tatiff-plus">+ Выезд на замер/помощь в онлайн замере</li>
+                            <li className="tatiff-plus">+ Обмерный план</li>
+                            <li className="tatiff-plus">+ Планировачное решение</li>
+                            <li className="tatiff-plus">+ Расположение розеток</li>
+                            <li className="tatiff-plus">+ Расположение светильников</li>
+                            <li className="tatiff-plus">+ Корректировки</li>
+                        </ul>
+                        <div className="tariff-slide-bottom-div">
+                            <p className="tariff-price">{ TARIFFS.min.price } р м²</p>
+                            <button 
+                                className={ selectedTariff.name === TARIFFS.min.name ? "choose-tariff-btn-active"  : "choose-tariff-btn" }
+                                onClick={ () => onSwiperTariffClick(TARIFFS.min) }
+                                disabled={ selectedTariff.name === TARIFFS.min.name ? true : false }
+                            >
+                                { selectedTariff.name === TARIFFS.min.name ? 'Тариф выбран' : 'Выбрать тариф' }
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="tariff-slide medium-tariff">
+                        <p className="tariff-title">{ TARIFFS.medium.name }</p>
+                        <p>ПАКЕТ { TARIFFS.min.name }</p>
+                        <ul className="tariff-pluses-list">
+                            <li className="tatiff-plus">+ Развертки стен с размерами</li>
+                            <li className="tatiff-plus">+ Продумывание дизайна</li>
+                            <li className="tatiff-plus">+ Эскизный коллаж</li>
+                            <li className="tatiff-plus">+ 3D Вид планировочного решения</li>
+                        </ul>
+                        <div className="tariff-slide-bottom-div">
+                            <p className="tariff-price">{ TARIFFS.medium.price }р м²</p>
+                            <button 
+                                className={ selectedTariff.name === TARIFFS.medium.name ? "choose-tariff-btn-active" : "choose-tariff-btn" }
+                                onClick={ () => onSwiperTariffClick(TARIFFS.medium) }
+                                disabled={ selectedTariff.name === TARIFFS.medium.name ? true : false }
+                            >
+                                { selectedTariff.name === TARIFFS.medium.name ? 'Тариф выбран' : 'Выбрать тариф' }
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <div className="tariff-slide max-tariff">
+                        <p className="tariff-title">{ TARIFFS.max.name }</p>
+                        <p>ПАКЕТ { TARIFFS.medium.name }</p>
+                        <ul className="tariff-pluses-list">
+                            <li className="tatiff-plus">+ Полная проработка дизайн проекта</li>
+                            <li className="tatiff-plus">+ Визуализации</li>
+                            <li className="tatiff-plus">+ Спецификация</li>
+                        </ul>
+                        <div className="tariff-slide-bottom-div">
+                            <p className="tariff-price">{ TARIFFS.max.price }р м²</p>
+                            <button 
+                                className={ selectedTariff.name === TARIFFS.max.name ? "choose-tariff-btn-active"  : "choose-tariff-btn" }
+                                onClick={ () => onSwiperTariffClick(TARIFFS.max) }
+                                disabled={ selectedTariff.name === TARIFFS.max.name ? true : false }
+                            >
+                                { selectedTariff.name === TARIFFS.max.name ? 'Тариф выбран' : 'Выбрать тариф' }
+                            </button>
+                        </div>
                     </div>
                 </SwiperSlide>
             </Swiper>
@@ -161,20 +264,21 @@ function PricePage() {
                     max={ 600 }
                     onInput={ onInputRangeChange }
                 />
-                <input 
-                    className="calculation-selected-area" 
-                    ref={ inputTextRef } 
-                    type="text"
-                    value={ selectedArea }
-                    min={ 10 } 
-                    max={ 600 }
-                    onInput={ onInputTextChange }
-                />
-                {/* <div className="calculation-selected-area">{ selectedArea } м²</div> */}
+                <div className="calculation-selected-area">
+                    <input
+                        className="calculation-selected-area-text-input" 
+                        ref={ inputTextRef } 
+                        type="text"
+                        value={ selectedArea }
+                        min={ 10 } 
+                        max={ 600 }
+                        onInput={ onInputTextChange }
+                    />
+                    <p> м²</p>
+                </div>
+                
                 <button className="calculation-button" onClick={ onCalculationBtnClick }>Расчитать</button>
                 { finalPrice !== 0 && <div className="calculation-final-price">{ finalPrice } p</div> }
-
-                {/* <div className="calculation-final-price">{ finalPrice } p</div> */}
             </div>
             <OpenBackFormBtn/>
             <Footer/>
