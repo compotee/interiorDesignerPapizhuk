@@ -1,6 +1,6 @@
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
-import DesignProject from "../../components/object/design-project";
+import DesignProject from "../../components/design-project/design-project";
 import { DESIGN_PROJECTS } from "../../projects/projects";
 
 import "./design-projects-page-style.css"
