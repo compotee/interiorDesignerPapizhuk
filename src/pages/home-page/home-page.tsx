@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
-// import MenuModal from "../../components/menu-modal/menu-modal";
-// import OpenMoreProjectsBtn from "../../components/open-more-projects-btn/open-more-projects-btn";
 import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
-// import OpenChoosePriceBtn from "../../components/open-choose-price/open-choose-price";
+import { REAL_OBJECTS } from "../../projects/projects";
+import ObjectCard from "../../components/object-card/object-card";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { Autoplay, EffectFade } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -37,10 +36,7 @@ function HomePage() {
                             delay: 3000,
                             disableOnInteraction: false,
                         }}
-                        // pagination={{
-                        //     clickable: true,
-                        // }}
-                        modules={[EffectFade, Autoplay, Pagination]}
+                        modules={[EffectFade, Autoplay]}
                         loop={true}
                         effect={'fade'}
                     >
@@ -69,6 +65,11 @@ function HomePage() {
             </div>
             <div className="home-projects-div">
                 <h2 className="home-our-projects-title">Наши проекты</h2>
+                {
+                    REAL_OBJECTS.map((element) => {
+                        return (<ObjectCard objectCardData={ element }/>);
+                    })
+                }
                 <Link to={'/design-projects'} className="more-projects-btn">Больше проектов </Link>
             </div>
             <div className="home-about-div">
@@ -81,7 +82,6 @@ function HomePage() {
                 <p className="price-link-text">Рассчет стоимости вашего заказа</p> 
                 <img src={ arrow } alt="Стрелка" />
             </Link>
-            {/* <OpenChoosePriceBtn/> */}
             <OpenBackFormBtn/>
             <Footer/>
         </div>

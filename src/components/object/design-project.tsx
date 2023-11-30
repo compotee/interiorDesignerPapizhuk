@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "./object-style.css";
+import "./design-project-style.css";
 
 interface ObjectProps {
     objectData: {
@@ -11,9 +11,9 @@ interface ObjectProps {
     }
 }
 
-function Object({ objectData } : ObjectProps) {
+function DesignProject({ objectData } : ObjectProps) {
     return (
-        <div className="design-projects-div">
+        <div className="design-project-div">
             <Swiper
                 className="design-project-swiper"
                 spaceBetween={0}
@@ -26,9 +26,11 @@ function Object({ objectData } : ObjectProps) {
                     objectData.img.map((e) => {
                         console.log(e)
                         return (
-                          <SwiperSlide>
-                            <img src={e} alt=""/>
-                          </SwiperSlide>
+                            <SwiperSlide
+                                className="home-main-img"
+                            >
+                                <img className="home-main-img" src={e} alt=""/>
+                            </SwiperSlide>
                         );
                       })
                 }
@@ -39,4 +41,4 @@ function Object({ objectData } : ObjectProps) {
     )
 }
 
-export default Object;
+export default DesignProject;

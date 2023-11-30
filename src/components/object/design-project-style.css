@@ -1,9 +1,14 @@
-.design-projects-div {
-    margin-bottom: 200px;
+.design-project-div {
+    margin-bottom: 40px;
 }
 
 .design-project-swiper {
+    height: 180px;
     margin-bottom: 20px;
+}
+
+.swiper-slide{
+    width: fit-content;
 }
 
 .design-project-text {
