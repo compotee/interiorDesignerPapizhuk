@@ -10,21 +10,25 @@ import PricePage from "./pages/price-page/price-page";
 import BackFormPage from "./pages/back-form-page/back-form-page";
 import NotfoundPage from "./pages/not-found-page/not-found-page";
 
+import ScrollToTop from "./ScrollToTop";
+
 function App() {
   return (
     <BrowserRouter>
-          <Routes>
-              <Route path='/' element={<HomePage/>}/>
-              <Route path='/services-design' element={<ServicesDesignPage/>}/>
-              <Route path='/services-supervision' element={<ServicesSupervisionPage/>}/>
-              <Route path="/design-projects" element={<DesignProjectsPage/>}/>
-              <Route path="/real-objects" element={<RealObjectsPage/>}/>
-              <Route path="/object" element={<ObjectPage/>}/>
-              <Route path="/price" element={<PricePage/>}/>
-              <Route path="/back-form" element={<BackFormPage/>}/>
-              <Route path="*" element={<NotfoundPage />}/>
-          </Routes>
-        </BrowserRouter> 
+      <ScrollToTop>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='/services-design' element={<ServicesDesignPage/>}/>
+          <Route path='/services-supervision' element={<ServicesSupervisionPage/>}/>
+          <Route path="/design-projects" element={<DesignProjectsPage/>}/>
+          <Route path="/real-objects" element={<RealObjectsPage/>}/>
+          <Route path="/object" element={<ObjectPage/>}/>
+          <Route path="/price" element={<PricePage/>}/>
+          <Route path="/back-form" element={<BackFormPage/>}/>
+          <Route path="*" element={<NotfoundPage />}/>
+        </Routes>
+      </ScrollToTop>
+    </BrowserRouter> 
   )
 }
 

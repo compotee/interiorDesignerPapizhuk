@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
-import { REAL_OBJECTS } from "../../projects/projects";
 import ObjectCard from "../../components/object-card/object-card";
+import { REAL_OBJECTS } from "../../projects/projects";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from 'swiper/modules';
@@ -18,10 +19,10 @@ import thirdStartImg from './img/start-img-3.png'
 import fourthStartImg from './img/start-img-4.png'
 import fifthStartImg from './img/start-img-5.png'
 import arrow from './img/arrow.svg'
+
 import "./home-page-style.css";
 
 function HomePage() {
-
     return(
         <div className="container">
             <Header/>
@@ -70,7 +71,7 @@ function HomePage() {
                         return (<ObjectCard objectCardData={ element }/>);
                     })
                 }
-                <Link to={'/design-projects'} className="more-projects-btn">Больше проектов </Link>
+                <Link to={'/design-projects'} className="more-projects-btn">Больше проектов</Link>
             </div>
             <div className="home-about-div">
                 <h2 className="home-about-title">Основатель студии</h2>

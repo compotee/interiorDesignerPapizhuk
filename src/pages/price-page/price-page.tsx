@@ -173,7 +173,7 @@ function PricePage() {
                     <input
                         className="calculation-selected-area-text-input" 
                         ref={ inputTextRef } 
-                        type="text"
+                        type="number"
                         value={ selectedArea }
                         min={ 10 } 
                         max={ 600 }
@@ -181,7 +181,6 @@ function PricePage() {
                     />
                     <p>м²</p>
                 </div>
-                
                 <button className="calculation-button" onClick={ onCalculationBtnClick }>Расчитать</button>
                 { finalPrice !== 0 && <div className="calculation-final-price">{ finalPrice } p</div> }
             </div>

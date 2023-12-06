@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./object-card-style.css";
 import arrow from './img/arrow.svg'
@@ -15,8 +15,14 @@ interface ObjectCardProps {
 }
 
 function ObjectCard({ objectCardData } : ObjectCardProps) {
+    const navigate = useNavigate();
+
+    function onClick() {
+        navigate('/object',{state: objectCardData })
+    }
+
     return (
-        <Link to="/object" className="object-card-div">
+        <button onClick={ onClick } className="object-card-div">
             <img className='object-card-img' src={ objectCardData.mainImg } alt=""/>
             <div className="shadow"></div>
             <div className="object-card-text-div">
@@ -26,7 +32,7 @@ function ObjectCard({ objectCardData } : ObjectCardProps) {
                 </div>
                 <img src={ arrow } alt="" />
             </div>
-        </Link>
+        </button>
     )
 }
 
