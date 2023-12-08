@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
@@ -42,6 +42,20 @@ function PricePage() {
     
     function onCalculationBtnClick() {
         setFinalPrice(Number(selectedTariffRef.current?.value) * selectedArea)
+    }
+
+    function onSelectChange() {
+        const selectedPrice = Number(selectedTariffRef.current?.value)
+
+        if (TARIFFS.plan.price === selectedPrice) {
+            setSelectedTariff(TARIFFS.plan)
+        } else if (TARIFFS.min.price === selectedPrice) {
+            setSelectedTariff(TARIFFS.min)
+        } else if (TARIFFS.medium.price === selectedPrice) {
+            setSelectedTariff(TARIFFS.medium)
+        } else if (TARIFFS.max.price === selectedPrice) {
+            setSelectedTariff(TARIFFS.max)
+        }
     }
 
     return(
@@ -153,7 +167,7 @@ function PricePage() {
             <p className="price-page-title">Расчитать стоимость</p>
             <div className="calculation-div">
                 <p className="calculation-title">Выбранный тариф</p>
-                <select className="calculation-tariff-select" ref={ selectedTariffRef }>
+                <select className="calculation-tariff-select" ref={ selectedTariffRef } onChange={ onSelectChange }>
                     <option className="calculation-tariff-select-option" value={ TARIFFS.plan.price }>{ TARIFFS.plan.name }</option>
                     <option className="calculation-tariff-select-option" value={ TARIFFS.min.price }>{ TARIFFS.min.name }</option>
                     <option className="calculation-tariff-select-option" value={ TARIFFS.medium.price }>{ TARIFFS.medium.name }</option>
