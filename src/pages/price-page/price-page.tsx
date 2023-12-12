@@ -58,6 +58,10 @@ function PricePage() {
         }
     }
 
+    useEffect(() => {
+        setFinalPrice(Number(selectedTariffRef.current?.value) * selectedArea)
+    }, [selectedArea, selectedTariff]);
+
     return(
         <div className="container">
             <Header/>
@@ -65,7 +69,7 @@ function PricePage() {
             <p className="price-page-title">Выбор пакета</p>
             <Swiper
                 className="price-div-swiper"
-                spaceBetween={0}
+                spaceBetween={20}
                 centeredSlides={true}
                 pagination={{
                     clickable: true,
@@ -195,8 +199,8 @@ function PricePage() {
                     />
                     <p>м²</p>
                 </div>
-                <button className="calculation-button" onClick={ onCalculationBtnClick }>Расчитать</button>
-                { finalPrice !== 0 && <div className="calculation-final-price">{ finalPrice } p</div> }
+                {/* <button className="calculation-button" onClick={ onCalculationBtnClick }>Расчитать</button> */}
+                { finalPrice !== 0 && <div className="calculation-final-price">Итого: { finalPrice } p.</div> }
             </div>
             <OpenBackFormBtn/>
             <Footer/>

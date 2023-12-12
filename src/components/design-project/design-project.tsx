@@ -1,5 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import 'swiper/css';
+import 'swiper/css/zoom';
+import 'swiper/css/navigation';
+
+import { Navigation, Zoom } from 'swiper/modules';
+
 import "./design-project-style.css";
 
 interface ObjectProps {
@@ -14,27 +20,32 @@ interface ObjectProps {
 function DesignProject({ objectData } : ObjectProps) {
     return (
         <div className="design-project-div">
-            <Swiper
-                className="design-project-swiper"
-                spaceBetween={0}
-                centeredSlides={true}
-                pagination={{
-                    clickable: true,
-                }}
-            >
-                {
-                    objectData.img.map((e) => {
-                        console.log(e)
-                        return (
-                            <SwiperSlide
-                                className="home-main-img"
-                            >
-                                <img className="home-main-img" src={e} alt=""/>
-                            </SwiperSlide>
-                        );
-                      })
-                }
-            </Swiper>
+            <div className="design-project-swiper-div">
+                <div className="design-project-swiper-shadows"></div>
+                <Swiper
+                    className="design-project-swiper"
+                    spaceBetween={5}
+                    loop={true}
+                    zoom={true}
+                    navigation={true}
+                    modules={[Navigation, Zoom]}
+                >
+                    {
+                        objectData.img.map((e) => {
+                            console.log(e)
+                            return (
+                                <SwiperSlide>
+                                    {/* <div className="swiper-zoom-container">
+                                        <img className="design-project" src={e} alt=""/>
+                                    </div> */}
+                                    <img className="design-project" src={e} alt=""/>
+                                </SwiperSlide>
+                            );
+                        })
+                    }
+                </Swiper>
+            </div>
+            
             <p className="design-project-text">{ objectData.name }</p>
             <p  className="design-project-text"> в { objectData.place } | { objectData.square } м²</p>
         </div>

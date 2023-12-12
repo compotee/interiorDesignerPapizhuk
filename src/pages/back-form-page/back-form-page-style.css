@@ -19,6 +19,7 @@
 
 .back-form-imput-message {
     min-height: 150px;
+    resize: none;
 }
 
 .back-form-send-btn {

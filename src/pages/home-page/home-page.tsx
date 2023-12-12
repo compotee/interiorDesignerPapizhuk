@@ -13,11 +13,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-import firstStartImg from './img/start-img-1.png'
-import secondStartImg from './img/start-img-2.png'
-import thirdStartImg from './img/start-img-3.png'
-import fourthStartImg from './img/start-img-4.png'
-import fifthStartImg from './img/start-img-5.png'
+import firstStartImg from './img/1.jpg'
+import secondStartImg from './img/2.jpg'
+import thirdStartImg from './img/3.jpg'
+import fourthStartImg from './img/4.jpg'
+import fifthStartImg from './img/5.jpg'
+import sixthStartImg from './img/6.jpg'
+import seventhStartImg from './img/7.jpg'
+import eighthStartImg from './img/8.jpg'
+import ninthStartImg from './img/9.jpg'
+
 import arrow from './img/arrow.svg'
 
 import "./home-page-style.css";
@@ -42,19 +47,31 @@ function HomePage() {
                         effect={'fade'}
                     >
                         <SwiperSlide>
-                            <img className="home-main-img" src={ thirdStartImg } alt="Стартовое изображение"/>
-                        </SwiperSlide>
-                        <SwiperSlide>
                             <img className="home-main-img" src={ firstStartImg } alt="Стартовое изображение"/>
                         </SwiperSlide>
                         <SwiperSlide>
                             <img className="home-main-img" src={ secondStartImg } alt="Стартовое изображение"/>
                         </SwiperSlide>
                         <SwiperSlide>
+                            <img className="home-main-img" src={ thirdStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
                             <img className="home-main-img" src={ fourthStartImg } alt="Стартовое изображение"/>
                         </SwiperSlide>
                         <SwiperSlide>
                             <img className="home-main-img" src={ fifthStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="home-main-img" src={ sixthStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="home-main-img" src={ seventhStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="home-main-img" src={ eighthStartImg } alt="Стартовое изображение"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img className="home-main-img" src={ ninthStartImg } alt="Стартовое изображение"/>
                         </SwiperSlide>
                     </Swiper>
                     <div className="swiper-text-div">

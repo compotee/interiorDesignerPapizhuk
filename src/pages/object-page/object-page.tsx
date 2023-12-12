@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 import Header from "../../components/header/header";
@@ -11,6 +12,9 @@ function ObjectPage() {
     return(
         <div className="container">
             <Header/>
+            <p className="object-back-link-text">
+                <Link className="object-back-link" to={'/real-objects'}>Все объекты</Link> → { location.state.name }
+            </p>
             <img className="object-main-img" src={ location.state.mainImg } alt="" />
             <div className="object-main-inf">
                 <h2 className="object-title">{ location.state.name }</h2>

@@ -5,6 +5,7 @@
   max-width: 500px;
   min-height: 100%;
   margin: auto;
+  overflow-x: hidden;
   font-family: 'Ubuntu', sans-serif;
   color: #C0C3C4;
   background-color: #111111;
