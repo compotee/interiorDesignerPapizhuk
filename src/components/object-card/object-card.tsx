@@ -7,10 +7,12 @@ interface ObjectCardProps {
     objectCardData: {
         name: string;
         place: string;
-        square: number;
+        square: string;
+        designImg: string[];
+        realization: boolean;
         inf: string;
         mainImg: string;
-        img: string[];
+        realImg: never[];
     }
 }
 

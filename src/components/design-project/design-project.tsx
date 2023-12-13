@@ -12,8 +12,12 @@ interface ObjectProps {
     objectData: {
         name: string;
         place: string;
-        square: number;
-        img: string[];
+        square: string;
+        designImg: string[];
+        realization: boolean;
+        inf: string;
+        mainImg: string;
+        realImg: never[];
     }
 }
 
@@ -31,8 +35,7 @@ function DesignProject({ objectData } : ObjectProps) {
                     modules={[Navigation, Zoom]}
                 >
                     {
-                        objectData.img.map((e) => {
-                            console.log(e)
+                        objectData.designImg.map((e) => {
                             return (
                                 <SwiperSlide>
                                     {/* <div className="swiper-zoom-container">

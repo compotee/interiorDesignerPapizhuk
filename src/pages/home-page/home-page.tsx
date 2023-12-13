@@ -4,7 +4,7 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
 import ObjectCard from "../../components/object-card/object-card";
-import { REAL_OBJECTS } from "../../projects/projects";
+import { OBJECTS } from "../../projects/projects";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from 'swiper/modules';
@@ -84,8 +84,9 @@ function HomePage() {
             <div className="home-projects-div">
                 <h2 className="home-our-projects-title">Наши проекты</h2>
                 {
-                    REAL_OBJECTS.map((element) => {
-                        return (<ObjectCard objectCardData={ element }/>);
+                    OBJECTS.map((object) => {
+                        if (object.realization) 
+                            return (<ObjectCard objectCardData={ object }/>);
                     })
                 }
                 <Link to={'/design-projects'} className="more-projects-btn">Больше проектов</Link>
