@@ -35,7 +35,7 @@ function ObjectPage() {
                 {
                     object.realImg.length === 0 ? 
                         <>
-                            <p className="design-project-text">В данный момент проект находится в реализации.</p>
+                            <p className="design-project-text-temporary">В данный момент проект находится в реализации.</p>
                             <Swiper
                                 className="design-project-swiper"
                                 spaceBetween={5}

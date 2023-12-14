@@ -13,8 +13,9 @@ function RealObjectsPage() {
             <h2 className="title">Реализованные объекты</h2>
             <div className="design-projects-div">
                 {
-                    OBJECTS.map((element) => {
-                        return (<ObjectCard objectCardData={ element }/>);
+                    OBJECTS.map((object) => {
+                        if (object.realization)
+                        return (<ObjectCard objectCardData={ object }/>);
                     })
                 }
             </div>

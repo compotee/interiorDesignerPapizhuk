@@ -62,6 +62,40 @@ import highVillage13 from './img/high-village-13.jpg'
 import highVillage14 from './img/high-village-14.jpg'
 import highVillage15 from './img/high-village-15.jpg'
 
+import borovayaOrig1 from './img/borovaya-orig-1.jpg'
+import borovayaOrig2 from './img/borovaya-orig-2.jpg'
+import borovayaOrig3 from './img/borovaya-orig-3.jpg'
+import borovayaOrig4 from './img/borovaya-orig-4.jpg'
+import borovayaOrig5 from './img/borovaya-orig-5.jpg'
+import borovayaOrig6 from './img/borovaya-orig-6.jpg'
+
+import borovayaStudio1 from './img/borovaya-studio-1.jpg'
+import borovayaStudio2 from './img/borovaya-studio-2.jpg'
+import borovayaStudio3 from './img/borovaya-studio-3.jpg'
+import borovayaStudio4 from './img/borovaya-studio-4.jpg'
+import borovayaStudio5 from './img/borovaya-studio-5.jpg'
+import borovayaStudio6 from './img/borovaya-studio-6.jpg'
+import borovayaStudio7 from './img/borovaya-studio-7.jpg'
+
+import borovayaTwoRoom1 from './img/borovaya-two-room-1.jpg'
+import borovayaTwoRoom2 from './img/borovaya-two-room-2.jpg'
+import borovayaTwoRoom3 from './img/borovaya-two-room-3.jpg'
+import borovayaTwoRoom4 from './img/borovaya-two-room-4.jpg'
+import borovayaTwoRoom5 from './img/borovaya-two-room-5.jpg'
+import borovayaTwoRoom6 from './img/borovaya-two-room-6.jpg'
+import borovayaTwoRoom7 from './img/borovaya-two-room-7.jpg'
+import borovayaTwoRoom8 from './img/borovaya-two-room-8.jpg'
+
+import borovayaThreeRoom1 from './img/borovaya-three-room-1.jpg'
+import borovayaThreeRoom2 from './img/borovaya-three-room-2.jpg'
+import borovayaThreeRoom3 from './img/borovaya-three-room-3.jpg'
+import borovayaThreeRoom4 from './img/borovaya-three-room-4.jpg'
+import borovayaThreeRoom5 from './img/borovaya-three-room-5.jpg'
+import borovayaThreeRoom6 from './img/borovaya-three-room-6.jpg'
+import borovayaThreeRoom7 from './img/borovaya-three-room-7.jpg'
+import borovayaThreeRoom8 from './img/borovaya-three-room-8.jpg'
+import borovayaThreeRoom9 from './img/borovaya-three-room-9.jpg'
+
 const OBJECTS = [
     {
         name: "Квартира",
@@ -185,6 +219,80 @@ const OBJECTS = [
         realization: true,
         inf: "",
         mainImg: highVillage1,
+        realImg: []
+    },
+    {
+        name: "Квартира",
+        place: "ЖК Боровая парк",
+        square: "44,08",
+        designImg: [
+            borovayaOrig1,
+            borovayaOrig2,
+            borovayaOrig3,
+            borovayaOrig4,
+            borovayaOrig5,
+            borovayaOrig6,
+        ],
+        realization: true,
+        inf: "",
+        mainImg:  borovayaOrig1,
+        realImg: []
+    },
+    {
+        name: "Квартира для застройщика (однокомнатная)",
+        place: "ЖК Боровая парк",
+        square: "43,48",
+        designImg: [
+            borovayaStudio1,
+            borovayaStudio2,
+            borovayaStudio3,
+            borovayaStudio4,
+            borovayaStudio5,
+            borovayaStudio6,
+            borovayaStudio7,
+        ],
+        realization: false,
+        inf: "",
+        mainImg: borovayaStudio1,
+        realImg: []
+    },
+    {
+        name: "Квартира для застройщика (двухкомнатная)",
+        place: "ЖК Боровая парк",
+        square: "68,18",
+        designImg: [
+            borovayaTwoRoom1,
+            borovayaTwoRoom2,
+            borovayaTwoRoom3,
+            borovayaTwoRoom4,
+            borovayaTwoRoom5,
+            borovayaTwoRoom6,
+            borovayaTwoRoom7,
+            borovayaTwoRoom8,
+        ],
+        realization: false,
+        inf: "",
+        mainImg: borovayaTwoRoom1,
+        realImg: []
+    },
+    {
+        name: "Квартира для застройщика (трехкомнатная)",
+        place: "ЖК Боровая парк",
+        square: "78,06",
+        designImg: [
+            borovayaThreeRoom1,
+            borovayaThreeRoom2,
+            borovayaThreeRoom3,
+            borovayaThreeRoom4,
+            borovayaThreeRoom5,
+            borovayaThreeRoom6,
+            borovayaThreeRoom7,
+            borovayaThreeRoom8,
+            borovayaThreeRoom9,
+        ],
+        realization: false,
+        inf: "",
+        mainImg: borovayaThreeRoom1,
         realImg: []
     }
 ]

@@ -28,6 +28,27 @@ import arrow from './img/arrow.svg'
 import "./home-page-style.css";
 
 function HomePage() {
+    function getThreeObjects() {
+        const realObjects: { name: string; place: string; square: string; designImg: string[]; realization: boolean; inf: string; mainImg: string; realImg: never[]; }[] = []
+
+        OBJECTS.forEach(object => {
+            if (object.realization) realObjects.push(object)
+        });
+
+        const threeObjects = realObjects.slice(0, 3);
+
+        return (
+            <>
+                {
+                    threeObjects.map((object) => {
+                        if (object.realization) return (<ObjectCard objectCardData={ object }/>);
+                    })
+                }
+            </>
+        ) 
+    }
+
+
     return(
         <div className="container">
             <Header/>
@@ -83,13 +104,14 @@ function HomePage() {
             </div>
             <div className="home-projects-div">
                 <h2 className="home-our-projects-title">Наши проекты</h2>
-                {
+                { getThreeObjects() }
+                {/* {
                     OBJECTS.map((object) => {
                         if (object.realization) 
                             return (<ObjectCard objectCardData={ object }/>);
                     })
-                }
-                <Link to={'/design-projects'} className="more-projects-btn">Больше проектов</Link>
+                } */}
+                <Link to={'/real-objects'} className="more-projects-btn">Больше проектов</Link>
             </div>
             <div className="home-about-div">
                 <h2 className="home-about-title">Основатель студии</h2>
