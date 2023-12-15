@@ -40,9 +40,9 @@ function PricePage() {
         setSelectedArea(Number(inputTextRef.current?.value))
     }
     
-    function onCalculationBtnClick() {
-        setFinalPrice(Number(selectedTariffRef.current?.value) * selectedArea)
-    }
+    // function onCalculationBtnClick() {
+    //     setFinalPrice(Number(selectedTariffRef.current?.value) * selectedArea)
+    // }
 
     function onSelectChange() {
         const selectedPrice = Number(selectedTariffRef.current?.value)

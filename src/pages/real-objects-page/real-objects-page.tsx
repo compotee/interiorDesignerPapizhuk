@@ -15,7 +15,7 @@ function RealObjectsPage() {
                 {
                     OBJECTS.map((object) => {
                         if (object.realization)
-                        return (<ObjectCard objectCardData={ object }/>);
+                            return (<ObjectCard objectCardData={ object }/>);
                     })
                 }
             </div>

@@ -10,14 +10,14 @@
     margin-bottom: 200px;
 }
 
-.back-form-imput {
+.back-form-input {
     padding: 15px;
     margin-bottom: 30px;
     background: rgba(217, 217, 217, 0.80);
     border: none;
 }
 
-.back-form-imput-message {
+.back-form-input-message {
     min-height: 150px;
     resize: none;
 }
