@@ -39,7 +39,7 @@ function BackFormPage() {
         message += `Контакт связи: ${ inputContact?.value }\n`;
         message += `Сообщение: ${ inputMessage?.value }`;
 
-        axios.post(`https://api.telegram.org/bot${token }/sendMessage`, {
+        axios.post(`https://api.telegram.org/bot${ token }/sendMessage`, {
             chat_id: chat_id,
             parse_mode: 'html',
             text: message
