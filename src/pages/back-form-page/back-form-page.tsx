@@ -32,10 +32,14 @@ function BackFormPage() {
             inputMessage!.style.outline = 'none';
         }
 
+        let message = `Имя: ${ inputName?.value }\n`;
+        message += `Контакт связи: ${ inputContact?.value }\n`;
+        message += `Сообщение: ${ inputMessage?.value }`;
+
         axios.post('https://api.telegram.org/bot6919275116:AAGXuMO9DSm17HKXOXrhmThqhRhdLKcO-iI/sendMessage', {
             chat_id: "-4025228245",
             parse_mode: 'html',
-            text: 'попытка'
+            text: message
         }
         ).finally(() => {
             console.log("gjkexbkjcm")
