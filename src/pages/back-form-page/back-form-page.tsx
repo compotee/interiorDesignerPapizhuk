@@ -32,7 +32,7 @@ function BackFormPage() {
             inputMessage!.style.outline = 'none';
         }
 
-        if (inputNameRef.current?.value === '' || inputContactRef.current?.value === '' || inputMessageRef.current?.value === '') {
+        if (inputNameRef.current?.value === '' && inputContactRef.current?.value === '' && inputMessageRef.current?.value === '') {
             const token = "6919275116:AAGXuMO9DSm17HKXOXrhmThqhRhdLKcO-iI";
             const chat_id = "-4025228245";
 
