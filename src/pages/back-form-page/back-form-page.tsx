@@ -10,27 +10,27 @@ function BackFormPage() {
     const inputContactRef = useRef<HTMLInputElement>(null);
     const inputMessageRef = useRef<HTMLTextAreaElement>(null);
 
-    function onSendBtnClick() {
-        const inputName = inputNameRef.current;
-        const inputContact = inputContactRef.current;
-        const inputMessage = inputMessageRef.current;
+    // function onSendBtnClick() {
+    //     const inputName = inputNameRef.current;
+    //     const inputContact = inputContactRef.current;
+    //     const inputMessage = inputMessageRef.current;
 
-        if (inputName?.value === '') {
-            inputName!.style.outline = '1px solid red';
-        } else {
-            inputName!.style.outline = 'none';
-        }
-        if (inputContact?.value === '') {
-            inputContact!.style.outline = '1px solid red';
-        } else {
-            inputContact!.style.outline = 'none';
-        }
-        if (inputMessage?.value === '') {
-            inputMessage!.style.outline = '1px solid red';
-        } else {
-            inputMessage!.style.outline = 'none';
-        }
-    }
+    //     if (inputName?.value === '') {
+    //         inputName!.style.outline = '1px solid red';
+    //     } else {
+    //         inputName!.style.outline = 'none';
+    //     }
+    //     if (inputContact?.value === '') {
+    //         inputContact!.style.outline = '1px solid red';
+    //     } else {
+    //         inputContact!.style.outline = 'none';
+    //     }
+    //     if (inputMessage?.value === '') {
+    //         inputMessage!.style.outline = '1px solid red';
+    //     } else {
+    //         inputMessage!.style.outline = 'none';
+    //     }
+    // }
 
     // const isSend = inputNameRef.current?.value === '' || inputContactRef.current?.value === '' || inputMessageRef.current?.value === '' ;
 
@@ -38,7 +38,7 @@ function BackFormPage() {
         <div className="container">
             <Header/>
             <h2 className="title">Оставить заявку или задать вопрос</h2>
-            <form className="back-form" method="post" action="telegramm.php" >
+            <form className="back-form" method="POST" action="telegramm.php" >
                 <input 
                     ref={ inputNameRef }
                     className="back-form-input back-form-input-name"
@@ -65,7 +65,7 @@ function BackFormPage() {
                 <button 
                     type="submit"
                     // disabled={ isSend }
-                    onClick={ onSendBtnClick } 
+                    // onClick={ onSendBtnClick } 
                     className="back-form-send-btn">
                         Отправить
                 </button>
