@@ -38,11 +38,12 @@ function BackFormPage() {
         <div className="container">
             <Header/>
             <h2 className="title">Оставить заявку или задать вопрос</h2>
-            <form className="back-form">
+            <form className="back-form" method="POST" action="telegramm.php" >
                 <input 
                     ref={ inputNameRef }
                     className="back-form-input back-form-input-name"
                     type="text" 
+                    name="name"
                     placeholder="Имя"
                     required
                 />
@@ -50,16 +51,19 @@ function BackFormPage() {
                     ref={ inputContactRef } 
                     className="back-form-input back-form-input-contact" 
                     type="text" 
+                    name="contact"
                     placeholder="Email/телефон"
                     required
                 />
                 <textarea 
                     ref={ inputMessageRef } 
                     className="back-form-input back-form-input-message" 
+                    name="message"
                     placeholder="Ваше сообщение"
                     required
                 />
                 <button 
+                    type="submit"
                     // disabled={ isSend }
                     onClick={ onSendBtnClick } 
                     className="back-form-send-btn">
