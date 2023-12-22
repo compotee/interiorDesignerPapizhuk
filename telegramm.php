@@ -25,9 +25,15 @@ $telegram_url = "https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id
 // Отправляем запрос к API Telegram
 $response = file_get_contents($telegram_url);
 
+if ($response === false) {
+    echo 'Ошибка при отправке заявки.';
+} else {
+    echo 'Заявка успешно отправлена.';
+}
+
 
 // if ($sendToTelegram) {
 //   echo "Good!";
 // } else {
 //   echo "Error";
-// }
+// }t 
