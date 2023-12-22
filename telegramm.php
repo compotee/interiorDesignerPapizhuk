@@ -17,12 +17,17 @@ foreach($arr as $key => $value) {
 $token = "6919275116:AAGXuMO9DSm17HKXOXrhmThqhRhdLKcO-iI";
 $chat_id = "-4025228245";
 
-$debug_to_console("Test");
+// $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
-$sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
+// URL для отправки сообщения в Telegram
+$telegram_url = "https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&text=" . urlencode($txt);
 
-if ($sendToTelegram) {
-  echo "Good!";
-} else {
-  echo "Error";
-}
+// Отправляем запрос к API Telegram
+$response = file_get_contents($telegram_url);
+
+
+// if ($sendToTelegram) {
+//   echo "Good!";
+// } else {
+//   echo "Error";
+// }
