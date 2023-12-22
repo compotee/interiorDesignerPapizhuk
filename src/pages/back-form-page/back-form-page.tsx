@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import axios from "axios";
+
+import { BACK_FORM_POST } from "../../api/telegram";
 
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
@@ -16,51 +17,13 @@ function BackFormPage() {
         const inputContact = inputContactRef.current;
         const inputMessage = inputMessageRef.current;
 
-        if (inputName?.value === '') {
-            inputName!.style.outline = '1px solid red';
-        } else {
-            inputName!.style.outline = 'none';
+        if (inputName?.value !== '' && inputContact?.value !== '' && inputMessage?.value !== '') {
+            let message = `Имя: ${ inputName?.value }\n`;
+            message += `Контакт связи: ${ inputContact?.value }\n`;
+            message += `Сообщение: ${ inputMessage?.value }`;
+
+            BACK_FORM_POST(message);
         }
-        if (inputContact?.value === '') {
-            inputContact!.style.outline = '1px solid red';
-        } else {
-            inputContact!.style.outline = 'none';
-        }
-        if (inputMessage?.value === '') {
-            inputMessage!.style.outline = '1px solid red';
-        } else {
-            inputMessage!.style.outline = 'none';
-        }
-
-        const token = "6919275116:AAGXuMO9DSm17HKXOXrhmThqhRhdLKcO-iI";
-        const chat_id = "-4025228245";
-
-        let message = `Имя: ${ inputName?.value }\n`;
-        message += `Контакт связи: ${ inputContact?.value }\n`;
-        message += `Сообщение: ${ inputMessage?.value }`;
-
-        axios.post(`https://api.telegram.org/bot${ token }/sendMessage`, {
-            chat_id: chat_id,
-            parse_mode: 'html',
-            text: message
-        })
-
-        // if (inputNameRef.current?.value === '' && inputContactRef.current?.value === '' && inputMessageRef.current?.value === '') {
-        //     console.log(sivuhsu)
-
-        //     const token = "6919275116:AAGXuMO9DSm17HKXOXrhmThqhRhdLKcO-iI";
-        //     const chat_id = "-4025228245";
-
-        //     let message = `Имя: ${ inputName?.value }\n`;
-        //     message += `Контакт связи: ${ inputContact?.value }\n`;
-        //     message += `Сообщение: ${ inputMessage?.value }`;
-
-        //     axios.post(`https://api.telegram.org/bot${token }/sendMessage`, {
-        //         chat_id: chat_id,
-        //         parse_mode: 'html',
-        //         text: message
-        //     })
-        // }
     }
 
     return(

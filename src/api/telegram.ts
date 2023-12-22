@@ -1,8 +1,12 @@
-//  const baseUrl = 'https://api.telegram.org/bot6708606839:AAFPUf0zjK31txAcZ_-GYHEt67L_Vng6sWQ/'
- 
-//  export const sendMessage = async (messageM: string): Promise<void> =>{
-//     const url : string = `${baseUrl}sendMessage?chat_id=-4003897361text=${messageM};`
+import axios from "axios";
 
-//     const response : Response = await fetch(url);
+export function BACK_FORM_POST(message: string) {
+    const token = "6919275116:AAGXuMO9DSm17HKXOXrhmThqhRhdLKcO-iI";
+    const chat_id = "-4025228245";
 
-//  }
+    axios.post(`https://api.telegram.org/bot${ token }/sendMessage`, {
+        chat_id: chat_id,
+        parse_mode: 'html',
+        text: message
+    })
+}
