@@ -32,23 +32,21 @@ function BackFormPage() {
             inputMessage!.style.outline = 'none';
         }
 
-        let message = `Имя: ${ inputName?.value }\n`;
-        message += `Контакт связи: ${ inputContact?.value }\n`;
-        message += `Сообщение: ${ inputMessage?.value }`;
+        if (inputNameRef.current?.value === '' || inputContactRef.current?.value === '' || inputMessageRef.current?.value === '') {
+            const token = "6919275116:AAGXuMO9DSm17HKXOXrhmThqhRhdLKcO-iI";
+            const chat_id = "-4025228245";
 
-        axios.post('https://api.telegram.org/bot6919275116:AAGXuMO9DSm17HKXOXrhmThqhRhdLKcO-iI/sendMessage', {
-            chat_id: "-4025228245",
-            parse_mode: 'html',
-            text: message
+            let message = `Имя: ${ inputName?.value }\n`;
+            message += `Контакт связи: ${ inputContact?.value }\n`;
+            message += `Сообщение: ${ inputMessage?.value }`;
+
+            axios.post(`https://api.telegram.org/bot${token }/sendMessage`, {
+                chat_id: chat_id,
+                parse_mode: 'html',
+                text: message
+            })
         }
-        ).finally(() => {
-            console.log("gjkexbkjcm")
-        })
-
-        console.log("dcbj")
     }
-
-    // const isSend = inputNameRef.current?.value === '' || inputContactRef.current?.value === '' || inputMessageRef.current?.value === '' ;
 
     return(
         <div className="container">
@@ -80,7 +78,6 @@ function BackFormPage() {
                 />
                 <button
                     type="submit"
-                    // disabled={ isSend }
                     onClick={ onSendBtnClick } 
                     className="back-form-send-btn">
                         Отправить
