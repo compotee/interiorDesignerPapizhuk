@@ -38,7 +38,7 @@ function BackFormPage() {
         <div className="container">
             <Header/>
             <h2 className="title">Оставить заявку или задать вопрос</h2>
-            <form className="back-form" method="POST" action="telegramm.php" >
+            <form className="back-form" method="POST" action="./telegramm.php" >
                 <input 
                     ref={ inputNameRef }
                     className="back-form-input back-form-input-name"
