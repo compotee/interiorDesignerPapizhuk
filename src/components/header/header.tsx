@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import logo from "./img/logo-2.svg";
+import logo from "./img/logo-3.svg";
 import "./header-style.css";
 
 function Header() {

@@ -2,7 +2,7 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import ObjectCard from "../../components/object-card/object-card";
 
-import { REAL_OBJECTS } from "../../projects/projects";
+import { OBJECTS } from "../../projects/projects";
 
 import './real-objects-page-style.css'
 
@@ -13,8 +13,9 @@ function RealObjectsPage() {
             <h2 className="title">Реализованные объекты</h2>
             <div className="design-projects-div">
                 {
-                    REAL_OBJECTS.map((element) => {
-                        return (<ObjectCard objectCardData={ element }/>);
+                    OBJECTS.map((object) => {
+                        if (object.realization)
+                            return (<ObjectCard objectCardData={ object }/>);
                     })
                 }
             </div>
