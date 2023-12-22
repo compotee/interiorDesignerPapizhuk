@@ -17,6 +17,8 @@ foreach($arr as $key => $value) {
 $token = "6919275116:AAGXuMO9DSm17HKXOXrhmThqhRhdLKcO-iI";
 $chat_id = "-4025228245";
 
+$debug_to_console("Test");
+
 $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}","r");
 
 if ($sendToTelegram) {
