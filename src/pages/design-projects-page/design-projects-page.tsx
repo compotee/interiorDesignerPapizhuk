@@ -17,7 +17,6 @@ function DesignProjectsPage() {
                     })
                 }
             </div>
-            
             <Footer/>
         </div>
     )

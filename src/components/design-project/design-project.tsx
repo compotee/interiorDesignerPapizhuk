@@ -48,9 +48,8 @@ function DesignProject({ objectData } : ObjectProps) {
                     }
                 </Swiper>
             </div>
-            
             <p className="design-project-text">{ objectData.name }</p>
-            <p  className="design-project-text"> в { objectData.place } | { objectData.square } м²</p>
+            <p className="design-project-text"> в { objectData.place } | { objectData.square } м²</p>
         </div>
     )
 }

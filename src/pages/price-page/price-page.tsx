@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
@@ -13,8 +14,7 @@ import './price-page-style.css'
 const TARIFFS = {
     plan: { name: "PLAN", price: 500 },
     min: { name: "MINIMAL", price: 800 },
-    medium: { name: "MINIMAL+", price: 1000 },
-    max: { name: "STANDART", price: 1500 }
+    max: { name: "MAXIMUM", price: 1400 }
 }
 
 function PricePage() {
@@ -51,8 +51,6 @@ function PricePage() {
             setSelectedTariff(TARIFFS.plan)
         } else if (TARIFFS.min.price === selectedPrice) {
             setSelectedTariff(TARIFFS.min)
-        } else if (TARIFFS.medium.price === selectedPrice) {
-            setSelectedTariff(TARIFFS.medium)
         } else if (TARIFFS.max.price === selectedPrice) {
             setSelectedTariff(TARIFFS.max)
         }
@@ -82,11 +80,12 @@ function PricePage() {
                         <ul className="tariff-pluses-list">
                             <li className="tatiff-plus">+ Выезд на замер/помощь в онлайн замере</li>
                             <li className="tatiff-plus">+ Обмерный план</li>
-                            <li className="tatiff-plus">+ Планировачное решение</li>
+                            <li className="tatiff-plus">+ Разработка планировочного решения - 2/3 варианта</li>
                             <li className="tatiff-plus">+ Корректировки</li>
                         </ul>
                         <div className="tariff-slide-bottom-div">
                             <p className="tariff-price">{ TARIFFS.plan.price } р м²</p>
+                            <Link to={'/services-design'} className="read-more-btn">Подробнее...</Link>
                             <button 
                                 className={ selectedTariff.name === TARIFFS.plan.name ? "choose-tariff-btn-active"  : "choose-tariff-btn" }
                                 onClick={ () => onSwiperTariffClick(TARIFFS.plan) }
@@ -99,18 +98,20 @@ function PricePage() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <div className="tariff-slide min-tariff">
+                    <div className="tariff-slide medium-tariff">
                         <p className="tariff-title">{ TARIFFS.min.name }</p>
                         <ul className="tariff-pluses-list">
                             <li className="tatiff-plus">+ Выезд на замер/помощь в онлайн замере</li>
                             <li className="tatiff-plus">+ Обмерный план</li>
-                            <li className="tatiff-plus">+ Планировачное решение</li>
-                            <li className="tatiff-plus">+ Расположение розеток</li>
-                            <li className="tatiff-plus">+ Расположение светильников</li>
+                            <li className="tatiff-plus">+ Разработка планировочного решения - 2/3 варианта</li>
+                            <li className="tatiff-plus">+ План расположения розеток/выключателей</li>
+                            <li className="tatiff-plus">+ План освещения</li>
+                            <li className="tatiff-plus">+ План монтаж/демонтаж</li>
                             <li className="tatiff-plus">+ Корректировки</li>
                         </ul>
                         <div className="tariff-slide-bottom-div">
                             <p className="tariff-price">{ TARIFFS.min.price } р м²</p>
+                            <Link to={'/services-design'} className="read-more-btn">Подробнее...</Link>
                             <button 
                                 className={ selectedTariff.name === TARIFFS.min.name ? "choose-tariff-btn-active"  : "choose-tariff-btn" }
                                 onClick={ () => onSwiperTariffClick(TARIFFS.min) }
@@ -123,39 +124,19 @@ function PricePage() {
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <div className="tariff-slide medium-tariff">
-                        <p className="tariff-title">{ TARIFFS.medium.name }</p>
-                        <p className="incoming-tariff">ПАКЕТ { TARIFFS.min.name }</p>
-                        <ul className="tariff-pluses-list">
-                            <li className="tatiff-plus">+ Развертки стен с размерами</li>
-                            <li className="tatiff-plus">+ Продумывание дизайна</li>
-                            <li className="tatiff-plus">+ Эскизный коллаж</li>
-                            <li className="tatiff-plus">+ 3D Вид планировочного решения</li>
-                        </ul>
-                        <div className="tariff-slide-bottom-div">
-                            <p className="tariff-price">{ TARIFFS.medium.price }р м²</p>
-                            <button 
-                                className={ selectedTariff.name === TARIFFS.medium.name ? "choose-tariff-btn-active" : "choose-tariff-btn" }
-                                onClick={ () => onSwiperTariffClick(TARIFFS.medium) }
-                                disabled={ selectedTariff.name === TARIFFS.medium.name ? true : false }
-                            >
-                                { selectedTariff.name === TARIFFS.medium.name ? 'Тариф выбран' : 'Выбрать тариф' }
-                            </button>
-                        </div>
-                    </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
                     <div className="tariff-slide max-tariff">
                         <p className="tariff-title">{ TARIFFS.max.name }</p>
-                        <p className="incoming-tariff">ПАКЕТ { TARIFFS.medium.name }</p>
+                        <p className="incoming-tariff">+ Состав пакета { TARIFFS.min.name }</p>
                         <ul className="tariff-pluses-list">
-                            <li className="tatiff-plus">+ Полная проработка дизайн проекта</li>
-                            <li className="tatiff-plus">+ Визуализации</li>
+                            <li className="tatiff-plus">+ Разработка полного комплекта строительных чертежей</li>
+                            <li className="tatiff-plus">+ Развертки стен с размерами</li>
                             <li className="tatiff-plus">+ Спецификация</li>
+                            <li className="tatiff-plus">+ 3D визуализация</li>
+                            <li className="tatiff-plus">+ Список материалов и мебели</li>
                         </ul>
                         <div className="tariff-slide-bottom-div">
                             <p className="tariff-price">{ TARIFFS.max.price }р м²</p>
+                            <Link to={'/services-design'} className="read-more-btn">Подробнее...</Link>
                             <button 
                                 className={ selectedTariff.name === TARIFFS.max.name ? "choose-tariff-btn-active"  : "choose-tariff-btn" }
                                 onClick={ () => onSwiperTariffClick(TARIFFS.max) }
@@ -174,7 +155,6 @@ function PricePage() {
                 <select className="calculation-tariff-select" ref={ selectedTariffRef } onChange={ onSelectChange }>
                     <option className="calculation-tariff-select-option" value={ TARIFFS.plan.price }>{ TARIFFS.plan.name }</option>
                     <option className="calculation-tariff-select-option" value={ TARIFFS.min.price }>{ TARIFFS.min.name }</option>
-                    <option className="calculation-tariff-select-option" value={ TARIFFS.medium.price }>{ TARIFFS.medium.name }</option>
                     <option className="calculation-tariff-select-option" value={ TARIFFS.max.price }>{ TARIFFS.max.name }</option>
                 </select>
                 <p className="calculation-title">Площадь помещения</p>

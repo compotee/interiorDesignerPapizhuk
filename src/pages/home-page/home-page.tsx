@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
+import OpenPricePageBtn from "../../components/open-price-page-btn/open-price-page-btn";
 import OpenBackFormBtn from "../../components/open-back-form-btn/open-back-form-btn";
 import ObjectCard from "../../components/object-card/object-card";
 import { OBJECTS } from "../../projects/projects";
@@ -22,8 +23,7 @@ import sixthStartImg from './img/6.jpg'
 import seventhStartImg from './img/7.jpg'
 import eighthStartImg from './img/8.jpg'
 import ninthStartImg from './img/9.jpg'
-
-import arrow from './img/arrow.svg'
+import lenaPhoto from './img/lena-photo.jpg'
 
 import "./home-page-style.css";
 
@@ -48,9 +48,21 @@ function HomePage() {
         ) 
     }
 
+    // async function onClick() {
+    //     console.log(123)
+    //     const client = new MongoClient('mongodb+srv://mp795610:gmlOVusyomVy8MRu@interior-designer-papiz.30xcx9q.mongodb.net/?retryWrites=true&w=majority')
+    //     try {
+    //         console.log('cskvj')
+    //         await client.connect()
+    //         console.log('cskvj')
+    //     } catch (e) {
+    //         console.log(e)
+    //     }
+    // }
 
     return(
         <div className="container">
+            {/* <button onClick={onClick} style={{color: "white"}}>vgkuhk</button> */}
             <Header/>
             <div className="home-div">
                 <div className="swiper-container">
@@ -96,11 +108,17 @@ function HomePage() {
                         </SwiperSlide>
                     </Swiper>
                     <div className="swiper-text-div">
-                        <h1 className="swiper-title">Дизайн студия интерьера</h1>
+                        <h1 className="swiper-title">Студия дизайна интерьера</h1>
                         <p className="swiper-text">Елены Папижук</p>
                     </div>
                 </div>
-                <p className="home-text">Мы делаем удобный и уютный интерьер для вашего дома. В бэкграунде у нас такие работы как: дизайн интерьера для различных квартир, домов, а так же есть предложения для застройщиков и авторский надзор за несколькими объектами.</p>
+                <p className="home-text">Мы делаем удобный и уютный интерьер для вашего дома.</p>
+                <ul>
+                    <li className="home-text">-дизайн интерьера для различных квартир, домов</li>
+                    <li className="home-text">-предложения для застройщиков</li>
+                    <li className="home-text">-авторский надзор за несколькими объектами</li>
+                    <li className="home-text">-поможем найти компромиссы в решении вопросов между всеми членами семьи</li>
+                </ul>  
             </div>
             <div className="home-projects-div">
                 <h2 className="home-our-projects-title">Наши проекты</h2>
@@ -111,18 +129,14 @@ function HomePage() {
                             return (<ObjectCard objectCardData={ object }/>);
                     })
                 } */}
-                <Link to={'/real-objects'} className="more-projects-btn">Больше проектов</Link>
+                <Link to={'/design-projects'} className="more-projects-btn">Больше проектов</Link>
             </div>
             <div className="home-about-div">
                 <h2 className="home-about-title">Основатель студии</h2>
-                <div className="home-about-text-div">
-                    <p className="home-about-text">Меня зовут Елена Папижук и эту студию я создавала 3 года. Конечно же все начиналось с обучения и первых проектов. Сейчас мы предоставляем вам профессионализм, широкий выбор услуг и богатый опыт в сфере дизайна интерьера.</p>
-                </div>
+                <img src={lenaPhoto} className='home-about-img' alt="Фото Елены" />
+                <p className="home-about-text">Меня зовут Елена Папижук и эту студию я создавала 3 года. Конечно же все начиналось с обучения и первых проектов. Сейчас мы предоставляем вам профессионализм, широкий выбор услуг и богатый опыт в сфере дизайна интерьера.</p>
             </div>
-            <Link to={ "/price" } className="price-link">
-                <p className="price-link-text">Рассчет стоимости вашего заказа</p> 
-                <img src={ arrow } alt="Стрелка" />
-            </Link>
+            <OpenPricePageBtn/>
             <OpenBackFormBtn/>
             <Footer/>
         </div>

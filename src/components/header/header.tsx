@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate,  Link } from "react-router-dom";
 import { useState } from "react";
 
-import logo from "./img/logo-3.svg";
+import logo from "./img/logo.svg";
 import "./header-style.css";
 
 function Header() {
@@ -27,7 +27,9 @@ function Header() {
     return (
         <div className="header-container">
             <div className="header-container-title">
-                <img className="header-logo" src={ logo } alt='Логотип'/>
+                <Link to={ "/" }>
+                    <img className="header-logo" src={ logo } alt='Логотип'/>
+                </Link>
                 <button className='hamburger-lines' onClick={ OpenMenuBtnClick }>
                     <span className={isActive ? 'line line1' : 'line'}></span>
                     <span className={isActive ? 'line line2' : 'line'}></span>
@@ -42,19 +44,11 @@ function Header() {
                             Главная
                     </button>
                 </li>
-                <li className="title-menu-modal">Услуги</li>
                 <li>
                     <button 
-                        className="link-menu-modal" 
-                        onClick={() => onClickHandler("/services-design") }>
-                            Дизайн проект
-                    </button>
-                </li>
-                <li>
-                    <button 
-                        className="link-menu-modal" 
-                        onClick={() => onClickHandler("/services-supervision") }>
-                            Авторский надзор
+                        className="link-menu-modal  indent"
+                        onClick={() => onClickHandler("/price") }>
+                            Рассчитать стоимость проекта
                     </button>
                 </li>
                 <li className="title-menu-modal">Портфолио</li>
@@ -67,23 +61,31 @@ function Header() {
                 </li>
                 <li>
                     <button 
-                        className="link-menu-modal" 
+                        className="link-menu-modal indent" 
                         onClick={() => onClickHandler("/real-objects") }>
                             Реализованные объекты
                     </button>
                 </li>
+                <li className="title-menu-modal">Информация об услугах</li>
                 <li>
                     <button 
-                        className="link-menu-modal"
-                        onClick={() => onClickHandler("/price") }>
-                            Рассчитать стоимость проекта
+                        className="link-menu-modal" 
+                        onClick={() => onClickHandler("/services-design") }>
+                            Дизайн проект
+                    </button>
+                </li>
+                <li>
+                    <button 
+                        className="link-menu-modal indent" 
+                        onClick={() => onClickHandler("/services-supervision") }>
+                            Авторский надзор
                     </button>
                 </li>
                 <li>
                     <button 
                         className="link-menu-modal" 
                         onClick={() => onClickHandler("/back-form") }>
-                            Контакты
+                            Связаться со мной
                     </button>
                 </li>
             </ul>

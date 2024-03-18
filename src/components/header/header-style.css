@@ -14,6 +14,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    z-index: 101;
 }
 
 .hamburger-lines {
@@ -59,20 +61,20 @@
     height: calc(100vh - 60px);
     min-height: auto;
     box-sizing: border-box;
-    padding: 30px 50px;
+    padding: 30px 30px;
     background-color: #111111;
 }
 
 .link-menu-modal {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
     text-align: left;
     font-family: Ubuntu;
-    font-size: 17px;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
-    letter-spacing: 4.25px;
-    color: #C1C1C1;
+    font-size: 17px;
+    letter-spacing: 0.25em;
+    color: #c1c1c1;
+
+    cursor: pointer;
 }
 
 .title-menu-modal {
@@ -81,10 +83,12 @@
     margin-bottom: 20px;
     margin-top: 12px;
     font-family: Ubuntu;
-    font-size: 15px;
-    font-style: normal;
     font-weight: 300;
-    line-height: normal;
-    letter-spacing: 3.75px;
-    color: #C1C1C1;
+    font-size: 17px;
+    letter-spacing: 0.25em;
+    color: rgba(193, 193, 193, 0.6);
+}
+
+.indent {
+    margin-bottom: 40px;
 }

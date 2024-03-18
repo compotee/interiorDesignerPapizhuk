@@ -99,82 +99,6 @@ import borovayaThreeRoom9 from './img/borovaya-three-room-9.jpg'
 const OBJECTS = [
     {
         name: "Квартира",
-        place: "ЖК Шевченко-Буденного",
-        square: "80,86",
-        designImg: [
-            shevchenkoBudyonny1,
-            shevchenkoBudyonny2,
-            shevchenkoBudyonny3,
-            shevchenkoBudyonny4,
-            shevchenkoBudyonny5,
-            shevchenkoBudyonny6,
-            shevchenkoBudyonny7,
-            shevchenkoBudyonny8
-        ],
-        realization: false,
-        inf: "",
-        mainImg: shevchenkoBudyonny1,
-        realImg: []
-    },
-    {
-        name: "Квартира",
-        place: "г.Починок",
-        square: "68,18",
-        designImg: [
-            pochinok1,
-            pochinok2,
-            pochinok3,
-            pochinok4,
-            pochinok5,
-            pochinok6,
-            pochinok7,
-            pochinok8,
-            pochinok9,
-        ],
-        realization: false,
-        inf: "",
-        mainImg: pochinok1,
-        realImg: []
-    },
-    {
-        name: "Квартира",
-        place: "ЖК Соловьиная роща",
-        square: "72",
-        designImg: [
-            nightingale1,
-            nightingale2,
-            nightingale3,
-            nightingale4,
-            nightingale5,
-            nightingale6,
-            nightingale7,
-            nightingale8,
-            nightingale9,
-        ],
-        realization: true,
-        inf: "",
-        mainImg: nightingale1,
-        realImg: []
-    },
-    {
-        name: "Квартира",
-        place: "г.Сочи ЖК Mercato",
-        square: "37,59",
-        designImg: [
-            mercato1,
-            mercato2,
-            mercato3,
-            mercato4,
-            mercato5,
-            mercato6,
-        ],
-        realization: true,
-        inf: "",
-        mainImg: mercato1,
-        realImg: []
-    },
-    {
-        name: "Квартира",
         place: "г.Сафоново",
         square: "78,33",
         designImg: [
@@ -197,7 +121,7 @@ const OBJECTS = [
     },
     {
         name: "Частный дом",
-        place: "Высокое village",
+        place: "ВЫСОКОЕ VILLAGE | Коттеджный посёлок",
         square: "284,74",
         designImg: [
             highVillage1,
@@ -223,6 +147,23 @@ const OBJECTS = [
     },
     {
         name: "Квартира",
+        place: "г.Сочи ЖК Mercato",
+        square: "37,59",
+        designImg: [
+            mercato1,
+            mercato2,
+            mercato3,
+            mercato4,
+            mercato5,
+            mercato6,
+        ],
+        realization: true,
+        inf: "",
+        mainImg: mercato1,
+        realImg: []
+    },
+    {
+        name: "Квартира",
         place: "ЖК Боровая парк",
         square: "44,08",
         designImg: [
@@ -236,6 +177,65 @@ const OBJECTS = [
         realization: true,
         inf: "",
         mainImg:  borovayaOrig1,
+        realImg: []
+    },
+    {
+        name: "Квартира",
+        place: "ЖК Соловьиная роща",
+        square: "72",
+        designImg: [
+            nightingale1,
+            nightingale2,
+            nightingale3,
+            nightingale4,
+            nightingale5,
+            nightingale6,
+            nightingale7,
+            nightingale8,
+            nightingale9,
+        ],
+        realization: true,
+        inf: "",
+        mainImg: nightingale1,
+        realImg: []
+    },
+    {
+        name: "Квартира",
+        place: "г.Починок",
+        square: "68,18",
+        designImg: [
+            pochinok1,
+            pochinok2,
+            pochinok3,
+            pochinok4,
+            pochinok5,
+            pochinok6,
+            pochinok7,
+            pochinok8,
+            pochinok9,
+        ],
+        realization: false,
+        inf: "",
+        mainImg: pochinok1,
+        realImg: []
+    },
+    {
+        name: "Квартира",
+        place: "ЖК Шевченко-Буденного",
+        square: "80,86",
+        designImg: [
+            shevchenkoBudyonny1,
+            shevchenkoBudyonny2,
+            shevchenkoBudyonny3,
+            shevchenkoBudyonny4,
+            shevchenkoBudyonny5,
+            shevchenkoBudyonny6,
+            shevchenkoBudyonny7,
+            shevchenkoBudyonny8
+        ],
+        realization: false,
+        inf: "",
+        mainImg: shevchenkoBudyonny1,
         realImg: []
     },
     {
@@ -293,6 +293,26 @@ const OBJECTS = [
         realization: false,
         inf: "",
         mainImg: borovayaThreeRoom1,
+        realImg: []
+    },
+    {
+        name: "Квартира",
+        place: "г. Смоленск Миловидово",
+        square: "",
+        designImg: [],
+        realization: false,
+        inf: "",
+        mainImg: "",
+        realImg: []
+    },
+    {
+        name: "Квартира",
+        place: "г. Смоленск ЖК Европейский",
+        square: "",
+        designImg: [],
+        realization: false,
+        inf: "",
+        mainImg: "",
         realImg: []
     }
 ]
