@@ -51,7 +51,11 @@ function Header() {
                             Рассчитать стоимость проекта
                     </button>
                 </li>
-                <li className="title-menu-modal">Портфолио</li>
+                <li className="title-menu-modal">
+                    Портфолио
+                    <div className="title-menu-modal-line port-top"/>
+                    <div className="title-menu-modal-line port-bottom"/>
+                </li>
                 <li>
                     <button 
                         className="link-menu-modal" 
@@ -66,7 +70,11 @@ function Header() {
                             Реализованные объекты
                     </button>
                 </li>
-                <li className="title-menu-modal">Информация об услугах</li>
+                <li className="title-menu-modal">
+                    Информация об услугах
+                    <div className="title-menu-modal-line inf-top"/>
+                    <div className="title-menu-modal-line inf-bottom"/>
+                </li>
                 <li>
                     <button 
                         className="link-menu-modal" 

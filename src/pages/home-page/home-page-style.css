@@ -123,13 +123,14 @@
 
 .home-about-text {
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
     width: 100%;
     margin: 0;
     font-family: Ubuntu;
     font-weight: 300;
     font-size: 14px;
+    line-height: 143%;
     letter-spacing: 0.15em;
     color: #c1c1c1;
 }
